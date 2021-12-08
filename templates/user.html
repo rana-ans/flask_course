@@ -1,3 +1,7 @@
 {% extends 'base.html' %}
 
-<h1>Hello {{ user_name|capitalize }}</h1>
+{% block content %}
+	<div class="typewriter">
+		<h1>Hello {{ user_name|capitalize }}</h1>
+	</div>
+{% endblock %}
