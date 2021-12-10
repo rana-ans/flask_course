@@ -1,0 +1,56 @@
+.sliding_door {
+	width: 378px;
+	height: 100vh;
+	overflow: hidden;
+}
+.sliding_door_wrapper {
+	width: 100%;
+	height: 100%;
+}
+.doors {
+	margin-top: 10px;
+	width: 50%;
+	height: 100vh;
+	float: left;
+	position: relative;
+	z-index: 1;
+}
+.left_door {
+	max-width: 100%;
+}
+.left_door img {
+	animation-name: slider1;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes slider1 {
+	from {
+		transform: translate(0px);
+	}
+	to {
+		transform: translate(100px);
+	}
+}
+.right_door {
+	max-width: 100%;
+}
+.right_door img {
+	animation-name: slider2;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes slider2 {
+	from {
+		transform: translate(100px);
+	}
+	to {
+		transform: translate(0px);
+	}
+}
+.door_frame {
+	margin-left: 86px;
+	position: absolute;
+	z-index: 2;
+}

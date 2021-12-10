@@ -14,6 +14,22 @@
 		<br>
 		<img src="{{ url_for('static', filename='images/ue_letterhead.jpeg') }}", width=100, height=200>
 		<br><br>
+		
+		<div class="sliding_door">
+			<div class="sliding_door_wrapper">
+				<div class="doors left_door">
+					<img src="{{ url_for('static', filename='images/left_door.png') }}", width=89, height=159>
+				</div>
+				<div class="door_frame">
+					<img src="{{ url_for('static', filename='images/door_frame.png') }}", width=204, height=179>
+				</div>
+				<div class="doors right_door">
+					<img src="{{ url_for('static', filename='images/right_door.png') }}", width=89, height=159>
+				</div>
+			</div>
+		</div>
+
+		<br><br>
 		<p id='demo'>This is Stuff...</p>
 		<script src="{{ url_for('static', filename='js/style.js') }}"></script>
 	{% else %}
