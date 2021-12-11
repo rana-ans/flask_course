@@ -4,7 +4,8 @@
 	overflow: hidden;
 }
 .sliding_door_wrapper {
-	width: 100%;
+	/*width: 100%;*/
+	width: 378px;
 	height: 100%;
 }
 .doors {
@@ -20,7 +21,7 @@
 }
 .left_door img {
 	animation-name: slider1;
-	animation-duration: 2s;
+	animation-duration: 4s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 }
@@ -37,7 +38,7 @@
 }
 .right_door img {
 	animation-name: slider2;
-	animation-duration: 2s;
+	animation-duration: 4s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 }

