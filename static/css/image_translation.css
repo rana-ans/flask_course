@@ -1,6 +1,6 @@
 .sliding_door {
 	width: 378px;
-	height: 100vh;
+	height: 179px;
 	overflow: hidden;
 }
 .sliding_door_wrapper {
@@ -10,7 +10,7 @@
 .doors {
 	margin-top: 10px;
 	width: 50%;
-	height: 100vh;
+	height: 179px;
 	float: left;
 	position: relative;
 	z-index: 1;

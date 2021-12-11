@@ -9,4 +9,22 @@
 		</div>
 	{% endfor %}
 
+	<br><br>
+
+	<div class="sliding_door">
+		<a href="/test" target="_blank">
+			<div class="sliding_door_wrapper">
+				<div class="doors left_door">
+					<img src="{{ url_for('static', filename='images/left_door.png') }}", width=89, height=159>
+				</div>
+				<div class="door_frame">
+					<img src="{{ url_for('static', filename='images/door_frame.png') }}", width=204, height=179>
+				</div>
+				<div class="doors right_door">
+					<img src="{{ url_for('static', filename='images/right_door.png') }}", width=89, height=159>
+				</div>
+			</div>
+		</a>
+	</div>
+
 {% endblock %}
